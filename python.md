@@ -5,6 +5,7 @@
 5. ##### 使用`bin(), oct(), hex()` 可以转化为相应的进制
 6. ##### 正负无穷大对表示方法   `float('inf')   float('-inf')    math.isinf(a)`来判断是否是无穷大  float\('nan'\)  math.isnan\(c\)
 7. ##### fractions 用于处理涉及到分数对数学计算
+8. ##### random.choice\(\[1,2,3,\]\)
 
 
 
