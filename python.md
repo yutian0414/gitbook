@@ -2,8 +2,12 @@
 2. ##### `round(value,ndigits)`将小数取整，并保留ndigits位小数
 3. ##### decimal 模块，可以提供更高精度对数学运算。
 4. ##### format\(x, '0.2f'\)  x=123.45  format 用于格式化输出数字 str.format\('  '\) 用于字符串对格式化， 格式为'\[&lt;&gt;^\]？width\[,\]?\(.digits\)?' \[\] 中对值为可选值，width，和digits 为整数
+5. ##### 使用bin\(\), oct\(\), hex\(\) 可以转化为相应的进制
+6. ##### 正负无穷大对表示方法                                                                      
 
-##### 
+#####              float\('inf'\)   float\('-inf'\)
 
+#####              math.isinf\(a\)来判断是否是无穷大                                                   
 
+  
 
