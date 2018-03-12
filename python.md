@@ -8,7 +8,8 @@
 8. ##### random.choice\(\[1,2,3,\]\)  选择一个       random.sample\(\[1,2,3,4,5\], 3\) 取样     random.shuffle\(value\_list\)  洗牌
 9. ##### random.randint\(0,10\) 0到10之间对随机整数     random.random\(0,1\)  0到1之间对随机float数
 10. ##### random.seed\(\)  用来初始化种子
-11. ##### calender  模块
+11. ##### calender  模块 处理与日历相关对内容
+12. ##### datetime.strptime\(text,'%Y-%m-%d'\)
 
 
 
