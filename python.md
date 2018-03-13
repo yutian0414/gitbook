@@ -10,8 +10,25 @@
 10. ##### random.seed\(\)  用来初始化种子
 11. ##### calender  模块 处理与日历相关对内容
 12. ##### datetime.strptime\(text,'%Y-%m-%d'\)
-13. ##### pytz 模块处理有关时区的问题         
+13. ##### pytz 模块处理有关时区的问题
 14. ##### 通常处理本地时间的方法是将所有对日期都转化微UTC时间，然后将所有对内部存储和处理都使用UTC时间
+15. ##### reversed\(\) 可以实现反向迭代， for x in reversed\(a\)              要求待处理对象拥有可确定的大小，或者实现了\_\_reversed\(\)\_\_特殊方法时才有效            可以先转化为列表，然后使用reversed\(value\_list\)来实现
 
+> ```py
+>                                        class countdown:
+>                                            def __init__(self,start):
+>                                                self.start=start
+>                                            def __iter__(self):
+>                                                while n>0:
+>                                                n=self.start
+>                                                yield n
+>                                                n-=1
+>                                            def __reversed__(self):
+>                                                n=1
+>                                                while n<=self.start:
+>                                                yiled n
+>                                                n+=1
+> ```
 
+16. 
 
