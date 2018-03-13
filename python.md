@@ -28,14 +28,9 @@
 >                                                while n<=self.start:
 >                                                yiled n
 >                                                n+=1
->                            
 > ```
 
-16. itertools.islice\(\)  可以用来对迭代器和生成器进行切片操作，itertools.dropwhile\(a\)  可对对于返回为True的项目忽略掉，即迭代时跳过前面的某些项目，直到有不满足项目的出现，后面的返回True的项目也不忽略
-
-17. 
-
-
-
+1. itertools.islice\(\)  可以用来对迭代器和生成器进行切片操作，itertools.dropwhile\(a\)  可对对于返回为True的项目忽略掉，即迭代时跳过前面的某些项目，直到有不满足项目的出现，后面的返回True的项目也不忽略
+2. 
 
 
