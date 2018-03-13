@@ -39,7 +39,8 @@
 7. ##### heapq.merge\(a, b\)  可以对有序序列，进行有序和并，并且可以进行有序的迭代。要求a和b都是预先拍好序的，它会取a\[0\]同b\[0\]进行比较，然后先返回小的，在返回大的，然后查看a\[1\]和b\[1\]
 8. iter\(\) 函数，可以选择性接受yield无参数的可调用对象以及一个哨兵（结束）值作为输入，iter\(\)会创建一个迭代器，然后重复调用用户提供的可调用对象，知道返回哨兵值为止
 
-9. ```py
+1. ```py
+
    CHUNKSIZE=8129
    def reader(s)
        while True:
@@ -52,7 +53,6 @@
        for chunk in iter(lambda:s.recv(CHUNKSIZE), b''):
            process_data(data)
    ```
-10. 
-11. 
 
+9. 
 
