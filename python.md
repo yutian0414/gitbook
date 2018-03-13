@@ -32,6 +32,8 @@
 
 1. itertools.islice\(\)  可以用来对迭代器和生成器进行切片操作，itertools.dropwhile\(a\)  可对对于返回为True的项目忽略掉，即迭代时跳过前面的某些项目，直到有不满足项目的出现，后面的返回True的项目也不忽略
 2. itertools.permutations\(vale_list or value \_set\)  用来讲其中的元素的所有排列情况返回。 itertools.permutations\( value\_list, num\)  用于产生序列中num个元素的组合情况，其中一个元素在一次组合中只能选一次，itertools.combinations\_with\_replacement\(value\_list,num\) 可以允许在一次组合时，一个元素可以选择多次_
+3. enumerate\(value\_lis, num\)  迭代时可以返回列表的序号, num 表示排序从num开始计数
+4. zip\(a,b\) 产生一个\[（a\[i\], b\[i\]\).......\] 的元组列表      itertools.ip\_longest\(a, b, fillvalue\)可以不要求a和b的长度一致，长度不足的使用fillvalue填充
 
 
 
