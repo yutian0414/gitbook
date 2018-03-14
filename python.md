@@ -73,5 +73,13 @@ with open('somefile.txt', 'rt') as f:
        text=f.read()
    ```
 
+   5. os.path.getsize\('filename'\) 获取文件大小, readinto 可以将文件数据直接读取到分配好大小的数组中
+
+6. ```py
+   buf=bytearray(os.path.getsize(filename)
+   with open(filename,'rb') as f:
+    f.readinto(buf) 
+   ```
+
 
 
