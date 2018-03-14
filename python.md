@@ -118,5 +118,14 @@ tempfile.TemporaryDirectory 可以创建临时目录
 
 tempfile.NamedTemporaryFile 可以创建命名的临时文件，delete=false 可以设置文件关闭时，不自动删除文件
 
+tempfile.gettempdir   可以获取临时文件的目录
+
+* [ ] pySerial  这个模块处理同串口链接的功能
+
+```py
+ser=serial.Serial('/dev/tty.usbmodem641', baudrate=9600, bytesize=8, parity='N', stopbits=1)
+#连接成功之后，可以使用read，write，readline 进行读写数据
+```
+
 
 
