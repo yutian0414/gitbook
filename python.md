@@ -112,6 +112,11 @@ sys.stdout.write(b'hello\n')    #这样会报错
 sys.stdout.buffer.write(b'hello\n')    #这样不报错
 ```
 
-* [ ] 
+* [ ] tempfile.TemporaryFile  可以创建未命名的临时文件 with temporaryFile\('w+t'\) as f
+
+tempfile.TemporaryDirectory 可以创建临时目录
+
+tempfile.NamedTemporaryFile 可以创建命名的临时文件，delete=false 可以设置文件关闭时，不自动删除文件
+
 
 
