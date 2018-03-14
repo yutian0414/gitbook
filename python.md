@@ -51,6 +51,16 @@
        for chunk in iter(lambda:s.recv(CHUNKSIZE), b''):
            process_data(data)
    ```
-10. 
+
+9. open打开文件模式  rt 读，wt写，at追加  with open\('sample.txt', 'rt', encoding='utf-8', errors='ignore'\)  ignore 还可以为replace
+
+```py
+with open('somefile.txt', 'rt') as f:
+    print('hello world', file=f)
+    
+```
+
+print 中增加一个file，可以讲打印内容重定向到文件中
+
 
 
