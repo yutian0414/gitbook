@@ -51,9 +51,9 @@
        for chunk in iter(lambda:s.recv(CHUNKSIZE), b''):
            process_data(data)
    ```
-10. open打开文件模式  rt 读，wt写，at追加，rb读二进制，wb写二进制，xt文件不存在时创建文件，写入数据，with open\('sample.txt', 'rt', encoding='utf-8', errors='ignore'\)  ignore 还可以为replace
+10. open打开文件模式  rt 读，wt写，at追加，rb读二进制，wb写二进制，xt，xb文件不存在时创建文件，写入数据，with open\('sample.txt', 'rt', encoding='utf-8', errors='ignore'\)  ignore 还可以为replace
 
-1. print 中增加一个file，可以讲打印内容重定向到文件中
+11. print 中增加一个file，可以讲打印内容重定向到文件中
 
 ```py
 with open('somefile.txt', 'rt') as f:
