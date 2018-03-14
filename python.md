@@ -61,8 +61,16 @@ with open('somefile.txt', 'rt') as f:
 ```
 
 1. print 中增加step 和 end 可以指定 打印内容使用的分割符，以及行位结尾符, str.join\(\) 也能够达到相同效果，但是需要为str对象
-2. ```py
+2. ```
    print('abc',50,91.5, sep=',', end='!!\n')
+   ```
+3. io.StringIO\(\), io.BytesIO\(\)  可以用来创建类似于文件的对象，模拟一个普通文件。可以对其进行read 和write
+
+4. gzip, bz2模块可以读取，处理压缩文件，使用同基本文件操作相同，另外有compresslevel 来制定压缩等级，最高9级
+
+5. ```py
+   with gzip.open('somefile', 'rt') as f:
+       text=f.read()
    ```
 
 
