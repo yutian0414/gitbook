@@ -38,22 +38,24 @@
 6. ##### yield from iterable 本质上等于  for item in iterable :yield item  的缩写。
 7. ##### heapq.merge\(a, b\)  可以对有序序列，进行有序和并，并且可以进行有序的迭代。要求a和b都是预先拍好序的，它会取a\[0\]同b\[0\]进行比较，然后先返回小的，在返回大的，然后查看a\[1\]和b\[1\]
 8. ##### iter\(\) 函数，可以选择性接受yield无参数的可调用对象以及一个哨兵（结束）值作为输入，iter\(\)会创建一个迭代器，然后重复调用用户提供的可调用对象，知道返回哨兵值为止
-9. ```py
-   CHUNKSIZE=8129
-   def reader(s)
-       while True:
-           data=s.recv(CHUNKSIZE)
-           if data == b'':
-               break
-           process_data(data)
-   #可以使用iter()改写为如下的形式
-   def reader(s):
-       for chunk in iter(lambda:s.recv(CHUNKSIZE), b''):
-           process_data(data)
-   ```
-10. open打开文件模式  rt 读，wt写，at追加，rb读二进制，wb写二进制，xt，xb文件不存在时创建文件，写入数据，with open\('sample.txt', 'rt', encoding='utf-8', errors='ignore'\)  ignore 还可以为replace
 
-11. print 中增加一个file，可以讲打印内容重定向到文件中
+```py
+CHUNKSIZE=8129
+def reader(s)
+    while True:
+        data=s.recv(CHUNKSIZE)
+        if data == b'':
+            break
+        process_data(data)
+#可以使用iter()改写为如下的形式
+def reader(s):
+    for chunk in iter(lambda:s.recv(CHUNKSIZE), b''):
+        process_data(data)
+```
+
+1. open打开文件模式  rt 读，wt写，at追加，rb读二进制，wb写二进制，xt，xb文件不存在时创建文件，写入数据，with open\('sample.txt', 'rt', encoding='utf-8', errors='ignore'\)  ignore 还可以为replace
+
+1. print 中增加一个file，可以讲打印内容重定向到文件中
 
 ```py
 with open('somefile.txt', 'rt') as f:
@@ -61,25 +63,29 @@ with open('somefile.txt', 'rt') as f:
 ```
 
 1. print 中增加step 和 end 可以指定 打印内容使用的分割符，以及行位结尾符, str.join\(\) 也能够达到相同效果，但是需要为str对象
-2. ```
+
+1. ```
    print('abc',50,91.5, sep=',', end='!!\n')
    ```
-3. io.StringIO\(\), io.BytesIO\(\)  可以用来创建类似于文件的对象，模拟一个普通文件。可以对其进行read 和write
+2. io.StringIO\(\), io.BytesIO\(\)  可以用来创建类似于文件的对象，模拟一个普通文件。可以对其进行read 和write
 
-4. gzip, bz2模块可以读取，处理压缩文件，使用同基本文件操作相同，另外有compresslevel 来制定压缩等级，最高9级
+3. gzip, bz2模块可以读取，处理压缩文件，使用同基本文件操作相同，另外有compresslevel 来制定压缩等级，最高9级
 
-5. ```py
-   with gzip.open('somefile', 'rt') as f:
-       text=f.read()
-   ```
+```py
+with gzip.open('somefile', 'rt') as f:
+    text=f.read()
+```
 
-   5. os.path.getsize\('filename'\) 获取文件大小, readinto 可以将文件数据直接读取到分配好大小的数组中
+5. os.path.getsize\('filename'\) 获取文件大小, readinto 可以将文件数据直接读取到分配好大小的数组中
 
-6. ```py
-   buf=bytearray(os.path.getsize(filename)
-   with open(filename,'rb') as f:
-    f.readinto(buf) 
-   ```
+```py
+buf=bytearray(os.path.getsize(filename)
+with open(filename,'rb') as f:
+ f.readinto(buf)
+```
+
+1. 
+
 
 
 
