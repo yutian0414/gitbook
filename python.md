@@ -51,21 +51,19 @@
        for chunk in iter(lambda:s.recv(CHUNKSIZE), b''):
            process_data(data)
    ```
-10. open打开文件模式  rt 读，wt写，at追加  with open\('sample.txt', 'rt', encoding='utf-8', errors='ignore'\)  ignore 还可以为replace
+10. open打开文件模式  rt 读，wt写，at追加，rb读二进制，wb写二进制，xt文件不存在时创建文件，写入数据，with open\('sample.txt', 'rt', encoding='utf-8', errors='ignore'\)  ignore 还可以为replace
 
-11. print 中增加一个file，可以讲打印内容重定向到文件中
+1. print 中增加一个file，可以讲打印内容重定向到文件中
 
 ```py
 with open('somefile.txt', 'rt') as f:
     print('hello world', file=f)
 ```
 
-1.  print 中增加step 和 end 可以指定 打印内容使用的分割符，以及行位结尾符, str.join\(\) 也能够达到相同效果，但是需要为str对象
+1. print 中增加step 和 end 可以指定 打印内容使用的分割符，以及行位结尾符, str.join\(\) 也能够达到相同效果，但是需要为str对象
 2. ```py
    print('abc',50,91.5, sep=',', end='!!\n')
    ```
-
-
 
 
 
