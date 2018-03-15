@@ -172,5 +172,7 @@ def unserialize_object(d):
 json.loads(s,object_hook=unserializer_object)  #可以还原实例
 ```
 
+* [ ] xml.etree.ElementTree lxml模块可以用来解析XML文件
+
 
 
