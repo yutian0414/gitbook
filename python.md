@@ -154,6 +154,7 @@ def serialize_instance(obj):
     return d
 p=Point(2,3)
 json.dumps(p)   #类实例是不能够序列化的，但是可以通过定义serialize_instance来帮助序列化
+json.dumps(p,default=serialize_instance)#可以序列化
 #如果取回一个实例，可以如下操作
 classes={
     'Point':Point
@@ -168,9 +169,8 @@ def unserialize_object(d):
             return obj
     else:
     return d
+json.loads(s,object_hook=unserializer_object)  #可以还原实例
 ```
-
-
 
 
 
