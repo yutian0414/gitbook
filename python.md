@@ -127,5 +127,50 @@ ser=serial.Serial('/dev/tty.usbmodem641', baudrate=9600, bytesize=8, parity='N',
 #连接成功之后，可以使用read，write，readline 进行读写数据
 ```
 
+* [ ] csv 模块可对csv文件进行读取和写入
+
+```py
+field_types=[('price',float),('change',float),('volume',int)]
+with open('stocks.csv') as f:
+    for row in csv.DictReader(f):   #读取为字典序列
+        row.update((key, conversion(row[key]))
+            for key, conversion in field_types)
+                print(row)
+```
+
+* [ ] pprient
+* [ ] json.loads\(str,obj\) 将字符串转化为相关的对象 例如json.loads\(s, object\__pairs\_hook=OrderedDict\)  另外有object_\_hook
+
+参数   json.dumps\(data\)  还有indent 参数，可以格式化输出，也可以使用sort\_keys 来进行排序
+
+```py
+class Point:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+def serialize_instance(obj):
+    d={'__classname__':type(obj).__name__}
+    d.update(vars(boj))
+    return d
+p=Point(2,3)
+json.dumps(p)   #类实例是不能够序列化的，但是可以通过定义serialize_instance来帮助序列化
+#如果取回一个实例，可以如下操作
+classes={
+    'Point':Point
+    }
+def unserialize_object(d):
+    clsname=d.pop('__classname__',None)
+    if clsname:
+        cls=classes[clsname]
+        obj=cls.__new__(cls)
+        for key,value in d.items():
+            setattr(obj,key,value)
+            return obj
+    else:
+    return d
+```
+
+
+
 
 
