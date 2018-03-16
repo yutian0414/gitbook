@@ -174,5 +174,43 @@ json.loads(s,object_hook=unserializer_object)  #可以还原实例
 
 * [ ] xml.etree.ElementTree lxml模块可以用来解析XML文件
 
+```py
+def onefunction(x, *args, **kwargs):
+    pass
+    
+def twofunction(x,*args,value):
+    pass
+    #value 在带*位置参数之后，为关键字参数，在调用的时候必须制定value=xxx来调用。
+```
+
+如果默认参数值为可变容器（例如：字典，集合，列表等）时，应该使用None作为默认值。
+
+```py
+ funcs=[lambda x: x+n for n in range(5)]
+ for f in funcs:
+    print(f(0))
+值为
+4
+4
+4
+4
+
+funcs=[lamba x,n=n:x+n for n in range(5)]
+for f in funcs:
+    print(f(0))
+值为
+0
+1
+2
+3
+4
+
+对于第一个由于n时一个自由变量，只有在函数f(0)执行的时候才会进行数据绑定，这个时候n=4
+对于第二funcs，由于设置了n=n,函数的默认值是在函数定义的时候绑定数据的，这个时候n为当时n的值，所以结果输出正确。
+
+
+
+```
+
 
 
