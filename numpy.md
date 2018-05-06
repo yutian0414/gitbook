@@ -12,9 +12,33 @@ e. rand: 原型： numpy.random.rand\(d0, d1, ..., dn\)，产生d0 - d1 - ... - 
 
 f. randn: 原型：numpy.random.randn（d0,d1,...,dn\),产生d0 - d1 - ... - dn形状的标准正态分布的float型数。
 
-g.numpy.random.uniform\(low,high,size\)  从一个均匀分布\[low,high\)中随机采样，注意定义域是左闭右开，即包含low，不包含high.
+g.uniform\(low,high,size\)  从一个均匀分布\[low,high\)中随机采样，注意定义域是左闭右开，即包含low，不包含high.the minimum 
 
-1. #### 
+
+
+1. #### numpy int 和float类型的最大值和最小值
+
+```
+for dtype in [np.int8,np.int32,np.int64]:
+    print('the minimum value of {}:'.format(dtype),np.iinfo(dtype).min)
+    print('the maximum value of {}:'.format(dtype),np.iinfo(dtype).max)
+for dtype in [np.float32,np.float64]:
+    print('the minimum value of {}:'.format(dtype),np.finfo(dtype).min)
+    print('the maximum value of {}:'.format(dtype),np.finfo(dtype).max)class 'numpy.int8'
+
+the minimum value of <class 'numpy.int8'>: -128
+the maximum value of <class 'numpy.int8'>: 127
+the minimum value of <class 'numpy.int32'>: -2147483648
+the maximum value of <class 'numpy.int32'>: 2147483647
+the minimum value of <class 'numpy.int64'>: -9223372036854775808
+the maximum value of <class 'numpy.int64'>: 9223372036854775807
+the minimum value of <class 'numpy.float32'>: -3.40282e+38
+the maximum value of <class 'numpy.float32'>: 3.40282e+38
+the minimum value of <class 'numpy.float64'>: -1.79769313486e+308
+the maximum value of <class 'numpy.float64'>: 1.79769313486e+308
+```
+
+#### 
 
 
 
